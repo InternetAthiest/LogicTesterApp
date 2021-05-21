@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/disconnectButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="disconnectButtonClick"
+        android:text="Disconnect"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/connectButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/connectButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="connectButtonClick"
+        android:text="Connect"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/disconnectButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/retriveInputsButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="onRetriveInputs"
+        android:text="Retrive inputs"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="onRunTestCase"
+        android:text="Run test case"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendOutputsButton"
+        app:layout_constraintStart_toEndOf="@+id/retriveInputsButton" />
+
+    <Button
+        android:id="@+id/sendOutputsButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="onSendOutputs"
+        android:text="Send outputs"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/connectButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/inputsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INPUTS"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#000000" />
+
+            <CheckBox
+                android:id="@+id/input0Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Input 0" />
+
+            <CheckBox
+                android:id="@+id/input1Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Input 1" />
+
+            <CheckBox
+                android:id="@+id/input2Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Input 2" />
+
+            <CheckBox
+                android:id="@+id/input3Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Input 3" />
+
+            <CheckBox
+                android:id="@+id/input4Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Input 4" />
+
+            <CheckBox
+                android:id="@+id/input5Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Input 5" />
+
+            <CheckBox
+                android:id="@+id/input6Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Input 6" />
+
+            <CheckBox
+                android:id="@+id/input7Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Input 7" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/outputLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OUTPUTS"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#000000" />
+
+            <CheckBox
+                android:id="@+id/output0Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Output 0" />
+
+            <CheckBox
+                android:id="@+id/output1Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Output 1" />
+
+            <CheckBox
+                android:id="@+id/output2Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Output 2" />
+
+            <CheckBox
+                android:id="@+id/output3Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Output 3" />
+
+            <CheckBox
+                android:id="@+id/output4Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Output 4" />
+
+            <CheckBox
+                android:id="@+id/output5Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Output 5" />
+
+            <CheckBox
+                android:id="@+id/output6Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Output 6" />
+
+            <CheckBox
+                android:id="@+id/output7Box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Output 7" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
